@@ -1,39 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32" height="32" shape-rendering="crispEdges">
-  <!-- Yellow heart pixels -->
-  <!-- row 2: bumps -->
-  <rect x="3" y="2" width="3" height="1" fill="#FFE000"/>
-  <rect x="10" y="2" width="3" height="1" fill="#FFE000"/>
-  <!-- row 3 -->
-  <rect x="2" y="3" width="5" height="1" fill="#FFE000"/>
-  <rect x="9" y="3" width="5" height="1" fill="#FFE000"/>
-  <!-- row 4: crack at col 8 -->
-  <rect x="2" y="4" width="6" height="1" fill="#FFE000"/>
-  <rect x="9" y="4" width="5" height="1" fill="#FFE000"/>
-  <!-- row 5: crack at col 7 -->
-  <rect x="2" y="5" width="5" height="1" fill="#FFE000"/>
-  <rect x="8" y="5" width="6" height="1" fill="#FFE000"/>
-  <!-- row 6: crack at col 8 -->
-  <rect x="3" y="6" width="5" height="1" fill="#FFE000"/>
-  <rect x="9" y="6" width="4" height="1" fill="#FFE000"/>
-  <!-- row 7: crack at col 7 -->
-  <rect x="4" y="7" width="3" height="1" fill="#FFE000"/>
-  <rect x="8" y="7" width="4" height="1" fill="#FFE000"/>
-  <!-- row 8: crack at col 8 -->
-  <rect x="5" y="8" width="3" height="1" fill="#FFE000"/>
-  <rect x="9" y="8" width="2" height="1" fill="#FFE000"/>
-  <!-- row 9: crack at col 7 -->
-  <rect x="6" y="9" width="1" height="1" fill="#FFE000"/>
-  <rect x="8" y="9" width="2" height="1" fill="#FFE000"/>
-  <!-- row 10: tip -->
-  <rect x="7" y="10" width="2" height="1" fill="#FFE000"/>
-  <!-- row 11: point -->
-  <rect x="7" y="11" width="1" height="1" fill="#FFE000"/>
+  <!-- Yellow heart — fills full 16px width at rows 3-5, tip at row 13 -->
 
-  <!-- Crack pixels (zigzag) -->
-  <rect x="8" y="4" width="1" height="1" fill="#111111"/>
-  <rect x="7" y="5" width="1" height="1" fill="#111111"/>
-  <rect x="8" y="6" width="1" height="1" fill="#111111"/>
-  <rect x="7" y="7" width="1" height="1" fill="#111111"/>
-  <rect x="8" y="8" width="1" height="1" fill="#111111"/>
-  <rect x="7" y="9" width="1" height="1" fill="#111111"/>
+  <!-- row 0: top bumps -->
+  <rect x="2"  y="0" width="3" height="1" fill="#FFE000"/>
+  <rect x="11" y="0" width="3" height="1" fill="#FFE000"/>
+  <!-- row 1 -->
+  <rect x="1"  y="1" width="5" height="1" fill="#FFE000"/>
+  <rect x="10" y="1" width="5" height="1" fill="#FFE000"/>
+  <!-- row 2: near-merge, gap at 7-8 -->
+  <rect x="0"  y="2" width="7" height="1" fill="#FFE000"/>
+  <rect x="9"  y="2" width="7" height="1" fill="#FFE000"/>
+  <!-- row 3: full width, crack at 7 -->
+  <rect x="0"  y="3" width="7" height="1" fill="#FFE000"/>
+  <rect x="8"  y="3" width="8" height="1" fill="#FFE000"/>
+  <!-- row 4: full width, crack at 8 -->
+  <rect x="0"  y="4" width="8" height="1" fill="#FFE000"/>
+  <rect x="9"  y="4" width="7" height="1" fill="#FFE000"/>
+  <!-- row 5: full width, crack at 7 -->
+  <rect x="0"  y="5" width="7" height="1" fill="#FFE000"/>
+  <rect x="8"  y="5" width="8" height="1" fill="#FFE000"/>
+  <!-- row 6: taper starts, crack at 8 -->
+  <rect x="1"  y="6" width="7" height="1" fill="#FFE000"/>
+  <rect x="9"  y="6" width="6" height="1" fill="#FFE000"/>
+  <!-- row 7: crack at 7 -->
+  <rect x="2"  y="7" width="5" height="1" fill="#FFE000"/>
+  <rect x="8"  y="7" width="6" height="1" fill="#FFE000"/>
+  <!-- row 8: crack at 8 -->
+  <rect x="3"  y="8" width="5" height="1" fill="#FFE000"/>
+  <rect x="9"  y="8" width="4" height="1" fill="#FFE000"/>
+  <!-- row 9: crack at 7 -->
+  <rect x="4"  y="9" width="3" height="1" fill="#FFE000"/>
+  <rect x="8"  y="9" width="4" height="1" fill="#FFE000"/>
+  <!-- row 10: crack at 8 -->
+  <rect x="5"  y="10" width="3" height="1" fill="#FFE000"/>
+  <rect x="9"  y="10" width="2" height="1" fill="#FFE000"/>
+  <!-- row 11: crack at 7 -->
+  <rect x="6"  y="11" width="1" height="1" fill="#FFE000"/>
+  <rect x="8"  y="11" width="2" height="1" fill="#FFE000"/>
+  <!-- row 12: near tip -->
+  <rect x="7"  y="12" width="2" height="1" fill="#FFE000"/>
+  <!-- row 13: tip -->
+  <rect x="7"  y="13" width="1" height="1" fill="#FFE000"/>
+
+  <!-- Zigzag crack -->
+  <rect x="7" y="3"  width="1" height="1" fill="#111111"/>
+  <rect x="8" y="4"  width="1" height="1" fill="#111111"/>
+  <rect x="7" y="5"  width="1" height="1" fill="#111111"/>
+  <rect x="8" y="6"  width="1" height="1" fill="#111111"/>
+  <rect x="7" y="7"  width="1" height="1" fill="#111111"/>
+  <rect x="8" y="8"  width="1" height="1" fill="#111111"/>
+  <rect x="7" y="9"  width="1" height="1" fill="#111111"/>
+  <rect x="8" y="10" width="1" height="1" fill="#111111"/>
+  <rect x="7" y="11" width="1" height="1" fill="#111111"/>
 </svg>
