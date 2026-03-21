@@ -42,8 +42,8 @@ export default function Home() {
     <div style={{ minHeight: "100vh", background: "#fff", color: "#000", fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
 
       {/* ── Header ── */}
-      <header style={{ borderBottom: "1px solid #000", padding: "44px 48px 28px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+      <header style={{ borderBottom: "1px solid #000", padding: "44px clamp(16px, 5vw, 48px) 28px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "16px", flexWrap: "wrap" }}>
           <div>
             <p style={{ fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", margin: "0 0 12px", color: "#aaa" }}>
               Fashion Magazine Submission Platform
@@ -65,11 +65,11 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════
           主品牌区块
       ════════════════════════════════════════════════════════════════ */}
-      <section style={{ borderBottom: "2px solid #000", padding: "36px 48px 40px", background: "#fafafa" }}>
+      <section style={{ borderBottom: "2px solid #000", padding: "36px clamp(16px, 5vw, 48px) 40px", background: "#fafafa" }}>
         <p style={{ fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", margin: "0 0 24px", color: "#888" }}>
           主品牌 · Global Brands
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1px", border: "1px solid #ddd" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(200px, 100%), 1fr))", gap: "1px", border: "1px solid #ddd" }}>
           {brands.map((b) => (
             <div
               key={b.name}
@@ -92,7 +92,7 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════
           Filters
       ════════════════════════════════════════════════════════════════ */}
-      <div style={{ padding: "20px 48px", borderBottom: "1px solid #e0e0e0", display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
+      <div style={{ padding: "20px clamp(16px, 5vw, 48px)", borderBottom: "1px solid #e0e0e0", display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
         <input
           type="text" placeholder="Search…" value={search}
           onChange={(e) => setSearch(e.target.value)}
@@ -130,7 +130,7 @@ export default function Home() {
       </div>
 
       {/* Difficulty legend */}
-      <div style={{ padding: "12px 48px", borderBottom: "1px solid #f0f0f0", display: "flex", gap: "22px", flexWrap: "wrap" }}>
+      <div style={{ padding: "12px clamp(16px, 5vw, 48px)", borderBottom: "1px solid #f0f0f0", display: "flex", gap: "22px", flexWrap: "wrap" }}>
         {difficulties.map((d) => {
           const cfg = difficultyConfig[d];
           const count = magazines.filter((m) => m.difficulty === d).length;
@@ -146,13 +146,13 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════
           Magazine Grid
       ════════════════════════════════════════════════════════════════ */}
-      <main style={{ padding: "48px" }}>
+      <main style={{ padding: "clamp(16px, 5vw, 48px)" }}>
         {filtered.length === 0 ? (
           <div style={{ textAlign: "center", padding: "80px 0", color: "#bbb" }}>
             <p style={{ fontSize: "12px", letterSpacing: "0.2em", textTransform: "uppercase" }}>No results</p>
           </div>
         ) : (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", border: "1px solid #000" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(280px, 100%), 1fr))", border: "1px solid #000" }}>
             {filtered.map((mag) => {
               const cfg = difficultyConfig[mag.difficulty];
               const china = isChina(mag.region);
@@ -208,7 +208,7 @@ export default function Home() {
       </main>
 
       {/* ── Footer ── */}
-      <footer style={{ borderTop: "1px solid #ebebeb", padding: "20px 48px", display: "flex", justifyContent: "space-between" }}>
+      <footer style={{ borderTop: "1px solid #ebebeb", padding: "20px clamp(16px, 5vw, 48px)", display: "flex", justifyContent: "space-between" }}>
         <span style={{ fontSize: "10px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#ccc" }}>Magazine Submission Platform</span>
         <span style={{ fontSize: "10px", color: "#ddd" }}>{new Date().getFullYear()}</span>
       </footer>

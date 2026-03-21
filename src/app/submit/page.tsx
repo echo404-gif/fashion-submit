@@ -318,7 +318,7 @@ export default function Submit() {
     <div style={{ minHeight: "100vh", background: "#fff", color: "#000", fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
 
       {/* Header */}
-      <header style={{ borderBottom: "1px solid #000", padding: "36px 48px 24px" }}>
+      <header style={{ borderBottom: "1px solid #000", padding: "36px clamp(16px, 5vw, 48px) 24px" }}>
         <Link href="/" style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#aaa", textDecoration: "none", display: "inline-block", marginBottom: "16px" }}>
           ← Magazine Database
         </Link>
@@ -331,12 +331,13 @@ export default function Submit() {
       </header>
 
       {/* Step indicator */}
-      <div style={{ padding: "16px 48px", borderBottom: "1px solid #e8e8e8", display: "flex", gap: "0", flexWrap: "wrap" }}>
+      <style>{`@media (max-width: 600px) { .submit-step-label { display: none !important; } .submit-step-sep { margin: 0 8px !important; } }`}</style>
+      <div style={{ padding: "16px clamp(16px, 5vw, 48px)", borderBottom: "1px solid #e8e8e8", display: "flex", gap: "0", flexWrap: "nowrap", overflowX: "auto" }}>
         {STEP_LABELS.map(([n, label], i) => {
           const done   = n < step;
           const active = n === step;
           return (
-            <div key={n} style={{ display: "flex", alignItems: "center" }}>
+            <div key={n} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <button
                 onClick={() => done && setStep(n)}
                 style={{ display: "flex", alignItems: "center", gap: "8px", background: "none", border: "none", cursor: done ? "pointer" : "default", padding: "4px 0", opacity: n > step ? 0.3 : 1 }}
@@ -351,19 +352,19 @@ export default function Submit() {
                 }}>
                   {done ? "✓" : n}
                 </span>
-                <span style={{ fontSize: "11px", letterSpacing: "0.08em", textTransform: "uppercase", fontWeight: active ? "600" : "400", color: active ? "#000" : "#999", whiteSpace: "nowrap" }}>
+                <span className="submit-step-label" style={{ fontSize: "11px", letterSpacing: "0.08em", textTransform: "uppercase", fontWeight: active ? "600" : "400", color: active ? "#000" : "#999", whiteSpace: "nowrap" }}>
                   {label}
                 </span>
               </button>
               {i < STEP_LABELS.length - 1 && (
-                <span style={{ margin: "0 16px", color: "#ddd", userSelect: "none" }}>—</span>
+                <span className="submit-step-sep" style={{ margin: "0 16px", color: "#ddd", userSelect: "none" }}>—</span>
               )}
             </div>
           );
         })}
       </div>
 
-      <main style={{ maxWidth: "760px", margin: "0 auto", padding: "48px" }}>
+      <main style={{ maxWidth: "1360px", margin: "0 auto", padding: "clamp(20px, 5vw, 48px)" }}>
 
         {/* ═══════════════════════ STEP 1 ═══════════════════════ */}
         {step === 1 && (
@@ -931,7 +932,7 @@ export default function Submit() {
       </main>
 
       {/* Footer */}
-      <footer style={{ borderTop: "1px solid #ebebeb", padding: "20px 48px", display: "flex", justifyContent: "space-between", marginTop: "40px" }}>
+      <footer style={{ borderTop: "1px solid #ebebeb", padding: "20px clamp(16px, 5vw, 48px)", display: "flex", justifyContent: "space-between", marginTop: "40px" }}>
         <span style={{ fontSize: "10px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#ccc" }}>Magazine Submission Platform</span>
         <span style={{ fontSize: "10px", color: "#ddd" }}>{new Date().getFullYear()}</span>
       </footer>
