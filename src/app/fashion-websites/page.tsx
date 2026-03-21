@@ -2,15 +2,12 @@
 
 import Link from "next/link";
 
-const BG        = "#FDF6F0";
-const CARD_BG   = "#FFF0EE";
-const CARD_BDR  = "#F5D4CF";
-const TEXT_DARK = "#3A1F1F";
-const TEXT_MID  = "#7A4A4A";
-const TEXT_SOFT = "#B07070";
-const BTN_BG    = "#D48888";
-const BTN_HOVER = "#C07070";
-const ACCENT    = "#C46060";
+const BG        = "#f4f3f0";
+const CARD_BG   = "#ffffff";
+const CARD_BDR  = "#e2e0db";
+const TEXT_DARK = "#000000";
+const TEXT_MID  = "#333333";
+const TEXT_SOFT = "#999999";
 
 const BRAT: React.CSSProperties = {
   fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif",
@@ -76,7 +73,7 @@ export default function FashionWebsites() {
       {/* Header */}
       <header style={{ borderBottom: `1px solid ${CARD_BDR}`, padding: "44px 48px 32px", background: BG }}>
         <Link
-          href="/"
+          href="/database"
           style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: TEXT_SOFT, textDecoration: "none", display: "inline-block", marginBottom: "20px" }}
         >
           ← back
@@ -95,7 +92,7 @@ export default function FashionWebsites() {
           <section key={cat.label} style={{ marginBottom: "52px" }}>
             {/* Category heading */}
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
-              <h2 style={{ ...BRAT, fontSize: "clamp(18px, 2.5vw, 26px)", margin: 0, color: ACCENT }}>
+              <h2 style={{ ...BRAT, fontSize: "clamp(18px, 2.5vw, 26px)", margin: 0, color: TEXT_DARK }}>
                 {cat.label}
               </h2>
               <div style={{ flex: 1, height: "1px", background: CARD_BDR }} />
@@ -135,7 +132,7 @@ function SiteCard({ site }: { site: Site }) {
         gap: "10px",
         transition: "box-shadow 0.15s",
       }}
-      onMouseEnter={(e) => (e.currentTarget.style.boxShadow = `0 4px 16px rgba(196,96,96,0.12)`)}
+      onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 4px 16px rgba(0,0,0,0.08)")}
       onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
     >
       <h3 style={{ ...BRAT, fontSize: "17px", margin: 0, color: TEXT_DARK, lineHeight: 1.1 }}>
@@ -155,22 +152,22 @@ function SiteCard({ site }: { site: Site }) {
           letterSpacing: "0.08em",
           textTransform: "uppercase",
           padding: "6px 14px",
-          background: BTN_BG,
-          color: "#fff",
+          background: "#ffffff",
+          color: "#000000",
           textDecoration: "none",
-          border: `1px solid ${BTN_BG}`,
-          transition: "background 0.12s, border-color 0.12s",
+          border: "1px solid #000000",
+          transition: "background 0.12s, color 0.12s",
           fontWeight: 700,
         }}
         onMouseEnter={(e) => {
           const el = e.currentTarget as HTMLAnchorElement;
-          el.style.background = BTN_HOVER;
-          el.style.borderColor = BTN_HOVER;
+          el.style.background = "#000000";
+          el.style.color = "#ffffff";
         }}
         onMouseLeave={(e) => {
           const el = e.currentTarget as HTMLAnchorElement;
-          el.style.background = BTN_BG;
-          el.style.borderColor = BTN_BG;
+          el.style.background = "#ffffff";
+          el.style.color = "#000000";
         }}
       >
         visit →

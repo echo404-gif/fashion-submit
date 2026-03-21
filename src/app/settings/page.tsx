@@ -37,7 +37,7 @@ export default function SettingsPage() {
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "#fff", fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "#fff", fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
       <div style={{ maxWidth: 520, margin: "0 auto", padding: "48px 24px" }}>
         <Link
           href="/submit"
