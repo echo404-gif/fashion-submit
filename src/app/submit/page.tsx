@@ -319,9 +319,14 @@ export default function Submit() {
 
       {/* Header */}
       <header style={{ borderBottom: "1px solid #000", padding: "36px clamp(16px, 5vw, 48px) 24px" }}>
-        <Link href="/database" style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#aaa", textDecoration: "none", display: "inline-block", marginBottom: "16px" }}>
-          ← Magazine Database
-        </Link>
+        <a
+          href="/"
+          style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#aaa", textDecoration: "none", display: "inline-block", marginBottom: "12px" }}
+          onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#000")}
+          onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#aaa")}
+        >
+          ← 首页
+        </a>
         <h1 style={{ fontSize: "clamp(24px, 4vw, 44px)", fontWeight: "300", letterSpacing: "-0.025em", margin: 0 }}>
           Contact / 投稿助手
         </h1>

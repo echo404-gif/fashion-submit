@@ -75,6 +75,14 @@ export default function Home() {
 
       {/* ── Header ── */}
       <header style={{ borderBottom: `1px solid ${BDR}`, padding: "44px clamp(16px, 5vw, 48px) 28px" }}>
+        <a
+          href="/"
+          style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#aaa", textDecoration: "none", display: "inline-block", marginBottom: "12px" }}
+          onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#000")}
+          onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#aaa")}
+        >
+          ← 首页
+        </a>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "16px", flexWrap: "wrap" }}>
           <div>
             <p style={{ fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", margin: "0 0 12px", color: "#aaa" }}>

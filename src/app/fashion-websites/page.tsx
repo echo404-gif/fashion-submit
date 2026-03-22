@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 
 const BG        = "#f4f3f0";
 const CARD_BG   = "#ffffff";
@@ -72,12 +71,14 @@ export default function FashionWebsites() {
 
       {/* Header */}
       <header style={{ borderBottom: `1px solid ${CARD_BDR}`, padding: "44px 48px 32px", background: BG }}>
-        <Link
-          href="/database"
-          style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: TEXT_SOFT, textDecoration: "none", display: "inline-block", marginBottom: "20px" }}
+        <a
+          href="/"
+          style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#aaa", textDecoration: "none", display: "inline-block", marginBottom: "12px" }}
+          onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#000")}
+          onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#aaa")}
         >
-          ← back
-        </Link>
+          ← 首页
+        </a>
         <h1 style={{ ...BRAT, fontSize: "clamp(32px, 6vw, 64px)", margin: 0, lineHeight: 0.95, color: TEXT_DARK }}>
           fashion websites
         </h1>
