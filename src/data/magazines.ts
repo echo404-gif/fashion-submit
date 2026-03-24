@@ -1,5 +1,5 @@
 export type Difficulty = "顶级极难" | "极难" | "较难" | "中等" | "较易";
-export type Region = "US" | "UK" | "France" | "Italy" | "Germany" | "Netherlands" | "Hong Kong" | "Taiwan" | "China Edition" | "China Local" | "Global";
+export type Region = "US" | "UK" | "France" | "Italy" | "Germany" | "Netherlands" | "Portugal" | "Hong Kong" | "Taiwan" | "China Edition" | "China Local" | "Global";
 export type Format = "hybrid" | "digital";
 export type PubType = "女刊" | "男刊" | "美妆" | "生活方式" | "摄影" | "文化" | "艺术" | "综合";
 export type Style = "主流时装" | "先锋时装文化" | "商业准一线" | "潮流青年" | "独立艺术时尚";
@@ -115,6 +115,9 @@ export const magazines: Magazine[] = [
   // 🇳🇱 Netherlands
   { name: "Fantastic Man", region: "Netherlands", difficulty: "极难", format: "hybrid", pubType: "男刊", style: "先锋时装文化", website: "https://fantasticman.com",          instagram: "manfantastic" },
 
+  // 🇵🇹 Portugal
+  { name: "Vogue Portugal", region: "Portugal", difficulty: "顶级极难", format: "hybrid", pubType: "女刊", style: "主流时装", website: "https://www.vogue.pt", instagram: "vogueportugal" },
+
   // 🇭🇰 Hong Kong
   { name: "Vogue Hong Kong",      region: "Hong Kong", difficulty: "顶级极难", format: "hybrid", pubType: "女刊", style: "主流时装",   website: "https://www.voguehk.com",          instagram: "voguehongkong" },
   { name: "Harper's Bazaar HK",   region: "Hong Kong", difficulty: "较难",     format: "hybrid", pubType: "女刊", style: "商业准一线", website: "https://www.harpersbazaar.com.hk", instagram: "harpersbazaarhk" },
@@ -180,6 +183,7 @@ export const regionLabels: Record<Region, string> = {
   Italy:          "🇮🇹 Italy",
   Germany:        "🇩🇪 Germany",
   Netherlands:    "🇳🇱 Netherlands",
+  Portugal:       "🇵🇹 Portugal",
   "Hong Kong":    "🇭🇰 Hong Kong",
   Taiwan:         "🇹🇼 Taiwan",
   "China Edition":"🇨🇳 China Edition",
@@ -195,6 +199,6 @@ export const formatLabels: Record<Format, string> = {
 export const isChina = (r: Region) => r === "China Edition" || r === "China Local";
 
 export const difficulties: Difficulty[] = ["顶级极难", "极难", "较难", "中等", "较易"];
-export const regions: Region[] = ["Global", "China Edition", "China Local", "Hong Kong", "Taiwan", "US", "UK", "France", "Italy", "Germany", "Netherlands"];
+export const regions: Region[] = ["Global", "China Edition", "China Local", "Hong Kong", "Taiwan", "US", "UK", "France", "Italy", "Germany", "Netherlands", "Portugal"];
 export const pubTypes: PubType[] = ["女刊", "男刊", "美妆", "生活方式", "摄影", "文化", "艺术", "综合"];
 export const styles: Style[] = ["主流时装", "先锋时装文化", "商业准一线", "潮流青年", "独立艺术时尚"];
